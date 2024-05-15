@@ -1,11 +1,12 @@
-# Install node
+### Install node
 npm i
 
-# Install React Router Dom
+### Install React Router Dom
 npm i react-router-dom
 
-# For Icons 
+### For Icons 
 npm install react-icons --save
+
 npm install react-icons/fa --save
 
 ## Available Scripts
