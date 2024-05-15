@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Install node
+npm i
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Install React Router Dom
+npm i react-router-dom
+
+# For Icons 
+npm install react-icons --save
+npm install react-icons/fa --save
 
 ## Available Scripts
 
