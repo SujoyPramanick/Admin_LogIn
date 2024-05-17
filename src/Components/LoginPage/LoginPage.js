@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import './LoginPage.css'; // Update the CSS file name if needed
+import './LoginPage.css';
 import { FaUser, FaLock } from 'react-icons/fa';
 
 const AdminLoginPage = () => {
@@ -11,11 +11,10 @@ const AdminLoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://127.0.0.1:8080/admin/login', {
+      const response = await fetch('/admin/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          credentials: 'include'
         },
         body: JSON.stringify({ username, password }),
       });

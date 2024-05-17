@@ -25,26 +25,25 @@ function Popups(props) {
             formDataObject.append('password', formData.password);
             formDataObject.append('confirm_password', formData.confirm_password);
             
-
-            const response = await fetch('https://127.0.0.1:8080/user/add', { 
+            const response = await fetch('/user/add', { 
                 method: 'POST',
                 body: formDataObject,
-                credentials: 'include'
             });
 
-            if (response.ok) {
-                setFormData({
-                    name: '',
-                    email: '',
-                    password: '',
-                    confirm_password: ''
-                });
-                props.setTrigger(false);
-                alert('Form submitted successfully');
-            } else {
-                const errorData = await response.json();
-                throw new Error(errorData.message || 'Failed to submit form');
+            if (!response.ok) {
+                throw new Error('Failed to add user. Server responded with ' + response.status);
             }
+
+            setFormData({
+                name: '',
+                email: '',
+                password: '',
+                confirm_password: ''
+            });
+            props.setTrigger(false);
+            props.fetchUsers();  // Add the new user to the list
+
+            alert('Form submitted successfully');
         } catch (error) {
             console.error('Error submitting form:', error);
             alert(error.message || 'Failed to submit form. Please try again.');

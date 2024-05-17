@@ -1,0 +1,35 @@
+.Dltpopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Dltpopup-inner {
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 700px;
+    background-color: #fff;
+}
+
+.inpput-box {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.boxs{
+    margin-top: 10px;
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #512da8;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+
