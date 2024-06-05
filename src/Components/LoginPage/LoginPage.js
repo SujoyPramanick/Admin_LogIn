@@ -4,7 +4,7 @@ import './LoginPage.css';
 import { FaUser, FaLock } from 'react-icons/fa';
 
 const AdminLoginPage = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
@@ -16,7 +16,7 @@ const AdminLoginPage = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ email, password }),
       });
   
       if (response.ok) {
@@ -43,10 +43,10 @@ const AdminLoginPage = () => {
           <h1>Admin Login</h1>
           <div className='input-box'>
             <input
-              type='text'
+              type='email'
               placeholder='Username'
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
             <FaUser className='icon' />

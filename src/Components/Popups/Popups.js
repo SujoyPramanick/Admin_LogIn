@@ -53,7 +53,7 @@ function Popups(props) {
     return (props.trigger) ? (
         <div className='popup'>
             <div className="popup-inner">
-                <h2>Enter Student's Details</h2><br />
+                <h2>Enter User's Details</h2><br />
                 <form className='ok'>
                     <div className='one'>
                         <div className="input-group">

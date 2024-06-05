@@ -6,7 +6,7 @@
 }
 
 .wrapp {
-  width: 620px;
+  width: 820px;
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, .2);
   backdrop-filter: blur(30px);
@@ -179,22 +179,23 @@
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  margin-left: 200px;
+  margin-left: 300px;
   width: 150px;
   height: 50px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  background: rgb(26, 50, 158);
   border: none;
   border-radius: 5px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-  background: #0f209e;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.15);
+  background: #595959fb;
   font-size: 20px;
   font-weight: 500;
+  color: #d0cdcd;
+  transition: background 1s, color 0.3s;
 }
 
 .btn2:hover {
-  background: #21034a;
+  background: #2f2f2f;
   color: #fff;
 }
